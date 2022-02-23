@@ -8,6 +8,8 @@
 import UIKit
 
 class ThemeTextField: UITextField {
+    
+    // MARK: - Views
     @IBOutlet weak var errorLabel: UILabel? {
         didSet {
             self.updateErrorMessage(withText: errorMessage, animated: false)
@@ -17,42 +19,37 @@ class ThemeTextField: UITextField {
         didSet {
             titleLabel.text = " \(title) "
             titleLabel.sizeToFit()
+            
         }
     }
-    @IBInspectable var placeholderColor: UIColor = UIColor.gray
-    @IBInspectable var smallStyle: Bool = false
-    @IBInspectable var extraSmallStyle: Bool = false
-    @IBInspectable var thirteenFontStyle: Bool = false
-    
+    private var titleLabel: UILabel!
+    private let borderLayer = CALayer()
+    // MARK: - Variables
     var errorMessage: String? {
         didSet(error) {
             self.updateErrorMessage(withText: error, animated: true)
         }
     }
     
-    var lineView: UIView!
-    var titleLabel: UILabel!
-    let defaultHeight: CGFloat = 44
+    // MARK: - Constants
+    private let placeholderColor: UIColor = .gray
+    private let defaultHeight: CGFloat = 44
     private let padding: CGFloat = 10
-    
-    var editingOrSelected: Bool {
-        return super.isEditing || isSelected
-    }
-    
-    var lineColor: UIColor {
+    private var lineColor: UIColor {
         if isEnabled {
-            return UIColor.purple.withAlphaComponent(thirteenFontStyle ? 0.33 : 1)
+            return .purple
         } else {
-            return .clear
+            return .gray
         }
     }
     
-    override public init(frame: CGRect) {
+    // MARK: - Views overridden methods
+    override init(frame: CGRect) {
         super.init(frame: frame)
         initTextField()
     }
     
-    required public init?(coder aDecoder: NSCoder) {
+    required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initTextField()
     }
@@ -63,13 +60,36 @@ class ThemeTextField: UITextField {
         setFonts()
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        borderLayer.frame = self.bounds
+    }
+    
+    override open var intrinsicContentSize: CGSize {
+        return .init(width: bounds.width, height: defaultHeight)
+    }
+    
+    override var isEnabled: Bool {
+        didSet {
+            updateColors()
+        }
+    }
+    
+    // MARK: - Other methods
     private final func initTextField() {
         borderStyle = .none
         setPaddings()
-        createLineView()
         createTitleLabel()
         updateColors()
         setFonts()
+        createBorderLayer()
+    }
+    
+    private func createBorderLayer() {
+        borderLayer.borderWidth = 1
+        borderLayer.cornerRadius = 5
+        borderLayer.bounds = self.frame
+        self.layer.insertSublayer(borderLayer, at: 0)
     }
     
     private func setPaddings() {
@@ -86,22 +106,7 @@ class ThemeTextField: UITextField {
                                                                      NSAttributedString.Key.font: font!])
     }
     
-    fileprivate func createLineView() {
-        
-        if lineView == nil {
-            let lineView = UIView()
-            lineView.isUserInteractionEnabled = false
-            lineView.layer.borderWidth = 1
-            lineView.layer.cornerRadius = 5
-            self.lineView = lineView
-            
-        }
-        
-        lineView.autoresizingMask = [.flexibleWidth, .flexibleTopMargin]
-        addSubview(lineView)
-    }
-    
-    func createTitleLabel() {
+    private func createTitleLabel() {
         if titleLabel == nil {
             let titleLabel = UILabel()
             titleLabel.textColor = .purple
@@ -111,30 +116,14 @@ class ThemeTextField: UITextField {
             titleLabel.frame.origin.x = padding
             self.titleLabel = titleLabel
         }
-        
         titleLabel.autoresizingMask = [.flexibleBottomMargin, .flexibleRightMargin]
         addSubview(titleLabel)
+        
     }
     
-    open func updateColors() {
-        lineView?.layer.borderColor = lineColor.cgColor
-        self.textColor = thirteenFontStyle ? .gray : .black
-    }
-    
-    /// Invoked by layoutIfNeeded automatically
-    override open func layoutSubviews() {
-        super.layoutSubviews()
-        lineView.frame = CGRect(x: 0, y: 0, width: bounds.size.width, height: defaultHeight)
-    }
-    
-    override open var intrinsicContentSize: CGSize {
-        return .init(width: bounds.width, height: defaultHeight)
-    }
-    
-    override var isEnabled: Bool {
-        didSet {
-            updateColors()
-        }
+    private func updateColors() {
+        borderLayer.borderColor = lineColor.cgColor
+        self.textColor = .black
     }
     
     private func updateErrorMessage(withText text: String?, animated: Bool) {
@@ -148,7 +137,6 @@ class ThemeTextField: UITextField {
                        options: .curveEaseInOut, animations: {
                         self.errorLabel?.superview?.layoutIfNeeded()
                        })
-        
     }
 }
 
