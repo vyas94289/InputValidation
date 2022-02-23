@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EdA-F0-gtL">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller2-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController2" customModule="InputValidation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J0X-vp-7h4">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="daE-Vh-P6q">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="223.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="M0i-W6-Ou7">
+                                                <rect key="frame" x="20" y="20" width="374" height="50.5"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter first name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nHd-PH-ACw" customClass="ThemeTextField" customModule="InputValidation" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="First Name"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="Er3-G7-EcJ"/>
+                                                            <outlet property="errorLabel" destination="8Fs-ne-dpa" id="oEL-OO-0CK"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fs-ne-dpa">
+                                                        <rect key="frame" x="0.0" y="36" width="374" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <color key="textColor" systemColor="systemRedColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="1OK-wJ-5yY">
+                                                <rect key="frame" x="20" y="86.5" width="374" height="50.5"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gJS-df-HVu" customClass="ThemeTextField" customModule="InputValidation" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Email"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="002-vL-eZ3"/>
+                                                            <outlet property="errorLabel" destination="DwX-w8-klK" id="twv-82-wqc"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwX-w8-klK">
+                                                        <rect key="frame" x="0.0" y="36" width="374" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <color key="textColor" systemColor="systemRedColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="gtq-JW-7O4">
+                                                <rect key="frame" x="20" y="153" width="374" height="50.5"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter mobile" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Umm-hO-zjm" customClass="ThemeTextField" customModule="InputValidation" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="title" value="Mobile"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="BYZ-38-t0r" id="wC2-dJ-gmq"/>
+                                                            <outlet property="errorLabel" destination="ujD-tb-97d" id="HBn-nI-9uP"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujD-tb-97d">
+                                                        <rect key="frame" x="0.0" y="36" width="374" height="14.5"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                        <color key="textColor" systemColor="systemRedColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="20" left="20" bottom="20" right="20"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="daE-Vh-P6q" firstAttribute="height" secondItem="J0X-vp-7h4" secondAttribute="height" priority="246" id="2mo-VG-CV8"/>
+                                    <constraint firstItem="daE-Vh-P6q" firstAttribute="leading" secondItem="J0X-vp-7h4" secondAttribute="leading" id="Lhb-kU-P1D"/>
+                                    <constraint firstAttribute="trailing" secondItem="daE-Vh-P6q" secondAttribute="trailing" id="Ua3-HE-EMb"/>
+                                    <constraint firstAttribute="bottom" secondItem="daE-Vh-P6q" secondAttribute="bottom" id="hxa-qo-IrI"/>
+                                    <constraint firstItem="daE-Vh-P6q" firstAttribute="width" secondItem="J0X-vp-7h4" secondAttribute="width" id="iVf-4c-Mca"/>
+                                    <constraint firstItem="daE-Vh-P6q" firstAttribute="top" secondItem="J0X-vp-7h4" secondAttribute="top" id="ndL-uG-7Pi"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J0X-vp-7h4" secondAttribute="trailing" id="Qun-lw-AMC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="J0X-vp-7h4" secondAttribute="bottom" id="RB0-yg-nvs"/>
+                            <constraint firstItem="J0X-vp-7h4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TfV-0r-tVJ"/>
+                            <constraint firstItem="J0X-vp-7h4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zuJ-iS-tEy"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7xy-re-17O"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="gJS-df-HVu" id="LUF-NX-Uiv"/>
+                        <outlet property="mobileTextfield" destination="Umm-hO-zjm" id="yEC-aM-OAH"/>
+                        <outlet property="nameTextField" destination="nHd-PH-ACw" id="FSx-aI-pcf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="115.84821428571428"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="UXb-d0-ICt">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="EdA-F0-gtL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Z0n-78-D7r">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="koA-OI-N9S"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t9c-dO-Nv2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="115.84821428571428"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="l4S-hw-Oyd">
+            <objects>
+                <viewController id="gZe-Nx-bih" customClass="ViewController" customModule="InputValidation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z8K-Wi-tFa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WcW-m0-BYg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jFa-uL-ecI">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="144"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Full name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pBi-js-hAT" customClass="MDCOutlinedTextField">
+                                                <rect key="frame" x="20" y="20" width="374" height="18.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="next" textContentType="name"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="themeStyle" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Name"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="gZe-Nx-bih" id="ekM-NF-szB"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OX6-Wc-GcM" customClass="MDCOutlinedTextField">
+                                                <rect key="frame" x="20" y="48.5" width="374" height="18.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" returnKeyType="next" textContentType="email"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="themeStyle" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Email"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="gZe-Nx-bih" id="TOI-XQ-yWi"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Mobile" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="S7f-L6-VaV" customClass="MDCOutlinedTextField">
+                                                <rect key="frame" x="20" y="77" width="374" height="18.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="next" textContentType="tel"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="themeStyle" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="gZe-Nx-bih" id="mEH-5k-41e"/>
+                                                </connections>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Vx-qf-QuC" customClass="MDCOutlinedTextField">
+                                                <rect key="frame" x="20" y="105.5" width="374" height="18.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" returnKeyType="go" textContentType="username"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="themeStyle" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="title" value="Username"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="delegate" destination="gZe-Nx-bih" id="vJf-nz-SYo"/>
+                                                </connections>
+                                            </textField>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="20" left="20" bottom="20" right="20"/>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="jFa-uL-ecI" secondAttribute="bottom" id="7qS-9U-zVa"/>
+                                    <constraint firstAttribute="trailing" secondItem="jFa-uL-ecI" secondAttribute="trailing" id="FMe-kE-YLF"/>
+                                    <constraint firstItem="jFa-uL-ecI" firstAttribute="top" secondItem="WcW-m0-BYg" secondAttribute="top" id="GV8-si-96b"/>
+                                    <constraint firstItem="jFa-uL-ecI" firstAttribute="height" secondItem="WcW-m0-BYg" secondAttribute="height" priority="246" id="RRc-WN-GdC"/>
+                                    <constraint firstItem="jFa-uL-ecI" firstAttribute="leading" secondItem="WcW-m0-BYg" secondAttribute="leading" id="lxr-hV-ABS"/>
+                                    <constraint firstItem="jFa-uL-ecI" firstAttribute="width" secondItem="WcW-m0-BYg" secondAttribute="width" id="yf3-eA-yzZ"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Vub-nU-zzw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vub-nU-zzw" firstAttribute="trailing" secondItem="WcW-m0-BYg" secondAttribute="trailing" id="2wo-im-DLS"/>
+                            <constraint firstItem="Vub-nU-zzw" firstAttribute="bottom" secondItem="WcW-m0-BYg" secondAttribute="bottom" id="kTJ-8G-q7t"/>
+                            <constraint firstItem="WcW-m0-BYg" firstAttribute="top" secondItem="Vub-nU-zzw" secondAttribute="top" id="nu5-xP-ZKr"/>
+                            <constraint firstItem="WcW-m0-BYg" firstAttribute="leading" secondItem="Vub-nU-zzw" secondAttribute="leading" id="yFS-bF-aAU"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="l5l-dn-jSN"/>
+                    <connections>
+                        <outlet property="emailField" destination="OX6-Wc-GcM" id="Xiy-qK-9vu"/>
+                        <outlet property="fullNameField" destination="pBi-js-hAT" id="3Td-7o-0xa"/>
+                        <outlet property="mobileField" destination="S7f-L6-VaV" id="U7Y-dU-sKU"/>
+                        <outlet property="usernameField" destination="3Vx-qf-QuC" id="BqP-RW-bFI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Khl-Y8-XgI" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1729" y="116"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
