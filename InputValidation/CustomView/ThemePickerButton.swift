@@ -9,6 +9,7 @@ import UIKit
 
 class ThemePickerButton: UIControl {
     
+    // MARK: - Inspectable
     @IBInspectable var text: String? = nil {
         didSet {
             placeholderLabel.text = text
@@ -33,16 +34,19 @@ class ThemePickerButton: UIControl {
         }
     }
     
+    // MARK: - Views
     private var placeholderLabel: UILabel!
     private var titleLabel: UILabel!
     private var imageView: UIImageView?
     private let borderLayer = CALayer()
-    private let padding: CGFloat = 10
     
+    // MARK: - Variable and Constants
+    private let padding: CGFloat = 10
     private var lineColor: UIColor {
         isEnabled ? .purple : .gray
     }
     
+    // MARK: - View Life Cycle
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setViews()
@@ -68,20 +72,12 @@ class ThemePickerButton: UIControl {
         borderLayer.frame = self.bounds
     }
     
+    // MARK: - Custom methods
     func setViews() {
         drawLineLayer()
         createPlaceholderLabel()
         createTitleLabel()
         addActions()
-        /* setTitleColor(., for: .normal)
-         backgroundColor = .clear
-         titleLabel?.font = UIFont.systemFont(ofSize: 15)
-         layer.borderWidth = 1
-         layer.cornerRadius = 5
-         layer.borderColor = lineColor.cgColor
-         let image = UIImage(systemName: "chevron.down")
-         self.setImage(image, for: .normal)
-         setNeedsDisplay()*/
     }
     
     private func drawLineLayer() {
