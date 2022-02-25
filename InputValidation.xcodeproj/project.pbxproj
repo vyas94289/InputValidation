@@ -21,6 +21,7 @@
 		8486853127BE6EA20023E737 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8486852F27BE6EA20023E737 /* LaunchScreen.storyboard */; };
 		8486854027BE74B80023E737 /* InputValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486853F27BE74B80023E737 /* InputValidation.swift */; };
 		8486854327BE792C0023E737 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486854227BE792C0023E737 /* Messages.swift */; };
+		84BF092727C895C4008228BC /* ThemePickerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84BF092627C895C4008228BC /* ThemePickerButton.swift */; };
 		F4A833D2995D83D12FA651DB /* Pods_InputValidation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E2DFEE9EF5563A850615773 /* Pods_InputValidation.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		8486853227BE6EA20023E737 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8486853F27BE74B80023E737 /* InputValidation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputValidation.swift; sourceTree = "<group>"; };
 		8486854227BE792C0023E737 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		84BF092627C895C4008228BC /* ThemePickerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemePickerButton.swift; sourceTree = "<group>"; };
 		DD77E2F619822D3FCEC1E6C4 /* Pods-InputValidation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InputValidation.release.xcconfig"; path = "Target Support Files/Pods-InputValidation/Pods-InputValidation.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -66,6 +68,7 @@
 				8483ACE227C5049A00DFA102 /* TextFieldWithError1.swift */,
 				8409909E27C61791001821C4 /* ThemeTextField.swift */,
 				840990A027C61B39001821C4 /* ThemeEditText.swift */,
+				84BF092627C895C4008228BC /* ThemePickerButton.swift */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 			files = (
 				840990A127C61B39001821C4 /* ThemeEditText.swift in Sources */,
 				8483ACE127C503AE00DFA102 /* ViewController2.swift in Sources */,
+				84BF092727C895C4008228BC /* ThemePickerButton.swift in Sources */,
 				8486854327BE792C0023E737 /* Messages.swift in Sources */,
 				8486852927BE6EA10023E737 /* ViewController.swift in Sources */,
 				8486852527BE6EA10023E737 /* AppDelegate.swift in Sources */,

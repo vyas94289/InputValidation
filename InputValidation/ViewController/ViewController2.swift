@@ -13,7 +13,8 @@ class ViewController2: UIViewController {
     @IBOutlet weak var mobileTextfield: ThemeTextField!
     @IBOutlet weak var emailTextField: ThemeTextField!
     @IBOutlet var nameTextField: ThemeTextField!
- 
+    @IBOutlet weak var deliveryTypeSpinner: ThemePickerButton!
+    
     private lazy var doneButton = UIBarButtonItem(title: "Go", style: .done, target: self, action: #selector(self.doneTapped))
     
     private lazy var validationWithField: [InputValidation: ThemeTextField] = [
@@ -28,6 +29,7 @@ class ViewController2: UIViewController {
         mobileTextfield.addCountryCodeButton(onButtonTapped: {
             
         })
+        deliveryTypeSpinner.text = "Home"
     }
     
     private func isValidInput() -> Bool {
@@ -49,6 +51,10 @@ class ViewController2: UIViewController {
     
     @objc private func countryCodeTapped() {
         
+    }
+    
+    @IBAction func typePickerTapped() {
+        deliveryTypeSpinner.isExpanded.toggle()
     }
 }
 // MARK: - Textfield delegate
