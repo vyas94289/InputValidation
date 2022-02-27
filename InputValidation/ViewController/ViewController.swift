@@ -42,8 +42,6 @@ class ViewController: UIViewController {
         countryCodeButton.frame.size.height = 40
         mobileField.leftView = countryCodeButton
         mobileField.leftViewMode = .always
-        
-
     }
     
     private func isValidInput() -> Bool {
